@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>—͟͞𝙄𝙈𝙂•𝘿𝙍𝙀𝘼𝘿- ⁴⁴⁴ [ 404 ]</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --neon-blue: #00f6ff;
+      --neon-white: #ffffff;
+      --bg-dark: #0a0a0a;
+      --star-color: #ffffff;
+      --text-glow: 0 0 10px var(--neon-blue), 0 0 20px var honorable(--neon-blue);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      color: var(--neon-white);
+      font-family: 'Roboto Mono', monospace;
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Shooting Stars Background */
+    .stars-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #000 100%);
+      z-index: -2;
+    }
+
+    .shooting-star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: var(--star-color);
+      border-radius: 50%;
+      box-shadow: 0 0 6px 2px var(--star-color);
+      animation: shoot 3s linear infinite;
+    }
+
+    .shooting-star::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--star-color), transparent);
+      right: 0;
+    }
+
+    @keyframes shoot {
+      0% {
+        transform: translateX(0) translateY(0) rotate(-45deg);
+        opacity: 1;
+      }
+      70% { opacity: 1; }
+      100% {
+        transform: translateX(-500px) translateY(500px) rotate(-45deg);
+        opacity: 0;
+      }
+    }
+
+    /* Multiple Stars */
+    .shooting-star:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; animation-duration: 3.5s; }
+    .shooting-star:nth-child(2) { top: 30%; left: 70%; animation-delay: 1.2s; animation-duration: 4s; }
+    .shooting-star:nth-child(3) { top: 50%; left: 30%; animation-delay: 2.5s; animation-duration: 3s; }
+    .shooting-star:nth-child(4) { top: 70%; left: 90%; animation-delay: 0.8s; animation-duration: 4.5s; }
+    .shooting-star:nth-child(5) { top: 20%; left: 50%; animation-delay: 3s; animation-duration: 3.8s; }
+
+    .container {
+      background: rgba(10, 10, 10, 0.9);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(0, 246, 255, 0.4);
+      border-radius: 20px;
+      padding: 40px 30px;
+      width: 90%;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(0, 246, 255, 0.25),
+                  inset 0 0 20px rgba(0, 246, 255, 0.1);
+      position: relative;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -2px; left: -2px; right: -2px; bottom: -2px;
+      background: linear-gradient(45deg, transparent, var(--neon-blue), transparent);
+      border-radius: 20px;
+      z-index: -1;
+      animation: borderPulse 3s infinite;
+    }
+
+    @keyframes borderPulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+
+    .logo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid var(--neon-blue);
+      margin: 0 auto 20px;
+      box-shadow: var(--text-glow), 0 0 35px rgba(0, 246, 255, 0.5);
+      object-fit: cover;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .store-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-shadow: var(--text-glow);
+      color: var(--neon-white);
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    .payment-method {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 246, 255, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 14px 0;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .payment-method:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 246, 255, 0.4);
+      border-color: var(--neon-blue);
+    }
+
+    .payment-method::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 246, 255, 0.15), transparent);
+      transition: 0.6s;
+    }
+
+    .payment-method:hover::before {
+      left: 100%;
+    }
+
+    .method-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--neon-blue);
+      text-shadow: 0 0 8px var(--neon-blue);
+      margin-bottom: 6px;
+    }
+
+    .method-value {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.1rem;
+      color: var(--neon-white);
+      word-break: break-all;
+    }
+
+    .unavailable, .admin-note {
+      color: #777;
+      font-style: italic;
+      font-size: 0.95rem;
+    }
+
+    .copy-btn {
+      background: transparent;
+      border: 1px solid var(--neon-blue);
+      color: var(--neon-blue);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      margin-left: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .copy-btn:hover {
+      background: var(--neon-blue);
+      color: #000;
+      box-shadow: 0 0 15px var(--neon-blue);
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.8rem;
+      color: #555;
+      text-shadow: 0 0 5px rgba(0, 246, 255, 0.2);
+    }
+
+    @media (max-width: 480px) {
+      .store-name { font-size: 1.5rem; }
+      .container { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Shooting Stars Background -->
+  <div class="stars-bg">
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+  </div>
+
+  <div class="container">
+    <img src="dread404.jpg" alt="IMG•DREAD-444" class="logo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMjIyIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM4ODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5JTUc8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI2NSUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM4ODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5EUkVBRDwvdGV4dD48L3N2Zz4='">
+
+    <h1 class="store-name">—͟͞𝙄𝙈𝙂•𝘿𝙍𝙀𝘼𝘿- ⁴⁴⁴ [ 404 ]</h1>
+    <p class="tagline">Digital • Secure • Verified</p>
+
+    <div class="payment-method">
+      <div class="method-title">DANA</div>
+      <div class="method-value">
+        083895106640
+        <button class="copy-btn" onclick="copyToClipboard('083895106640')">Copy</button>
+      </div>
+    </div>
+
+    <div class="payment-method">
+      <div class="method-title">GOPAY</div>
+      <div class="method-value unavailable">Tidak tersedia</div>
+    </div>
+
+    <div class="payment-method">
+      <div class="method-title">QRIS</div>
+      <div class="method-value admin-note">Minta ke admin</div>
+    </div>
+
+    <div class="footer">
+      © 2025 —͟͞𝙄𝙈𝙂•𝘿𝙍𝙀𝘼𝘿- ⁴⁴⁴ [ 404 ] • All Systems Operational
+    </div>
+  </div>
+
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Nomor DANA disalin: ' + text);
+      });
+    }
+
+    // Generate more stars dynamically
+    document.addEventListener('DOMContentLoaded', () => {
+      const starsContainer = document.querySelector('.stars-bg');
+      for (let i = 0; i < 60; i++) {
+        const star = document.createElement('div');
+        star.className = 'shooting-star';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.animationDelay = Math.random() * 5 + 's';
+        star.style.animationDuration = (Math.random() * 3 + 2.5) + 's';
+        starsContainer.appendChild(star);
+      }
+    });
+  </script>
+
+</body>
+</html>
